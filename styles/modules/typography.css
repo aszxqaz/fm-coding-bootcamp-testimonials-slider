@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Inter";
+  src: url("..//fonts/Inter/Inter.woff2") format("woff2-variations");
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.125rem, 0.29rem + 3.56vw, 2rem);
+  font-weight: 300;
+  line-height: 1.35;
+}

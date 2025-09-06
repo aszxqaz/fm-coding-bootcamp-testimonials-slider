@@ -1,0 +1,220 @@
+@import "./modules/modules.css";
+
+.testimonial {
+  padding-block-start: clamp(1.5rem, -0.357rem + 3.87vw, 3.125rem);
+
+  @media (min-width: 80em) {
+    display: grid;
+    grid-template-columns: 413fr 222fr 475fr;
+    align-items: center;
+  }
+}
+
+.container--testimonial {
+  @media (max-width: calc(80em - 1px)) {
+    max-width: unset;
+  }
+
+  @media (min-width: 80em) {
+    --m: 69.375rem;
+    --p: clamp(7.75rem, 4.8rem + 6.1vw, 10.3125rem);
+  }
+}
+
+.testimonial__text {
+  @media (min-width: 80em) {
+    z-index: 1;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+}
+
+.testimonial__image {
+  @media (min-width: 80em) {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+  }
+}
+
+.slide-button-group {
+  display: inline-flex;
+  background-color: white;
+  border-radius: 100vw;
+}
+
+.slide-button {
+  width: clamp(2.5rem, 1.55rem + 4.07vw, 3.5rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color-grey-400);
+  mask-size: 25% auto;
+  mask-position: center;
+  mask-repeat: no-repeat;
+
+  @media (hover: hover) {
+    transition: background-color 0.3s;
+
+    &:not(:disabled):hover {
+      background-color: var(--color-blue-950);
+    }
+  }
+}
+
+.slide-button--prev {
+  mask-image: url("../images/icon-prev.svg");
+}
+
+.slide-button--next {
+  mask-image: url("../images/icon-next.svg");
+}
+
+.container {
+  max-width: min(var(--m), 100% - 2 * var(--p));
+  margin-inline: auto;
+}
+
+.image-background {
+  --p: clamp(1.5rem, -4.5rem + 25.445vw, 7.75rem);
+  --m: 32.5rem;
+
+  width: 100%;
+  aspect-ratio: 1.06;
+
+  background-image: url("../images/pattern-bg.svg");
+  background-size: contain;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+
+  @media (min-width: 48em) {
+    --p: clamp(7.75rem, 4.8rem + 6.1vw, 10.3125rem);
+    --m: 44rem;
+  }
+
+  @media (min-width: 80em) {
+    max-width: unset;
+    margin-right: -13.2%;
+  }
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 9.2% 10.89% 7.515% 11.35%;
+
+  @media (min-width: 80em) {
+    padding: 9% 13.2% 7.75% 9.326%;
+  }
+}
+
+.image-parent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide-button-group {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 40px 50px -30px rgb(36 36 113 / 0.5);
+
+  opacity: 0;
+  transform: translateX(3rem);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.image.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.text-parent {
+  position: relative;
+}
+
+.text-placeholder {
+  opacity: 0;
+}
+
+.text {
+  position: absolute;
+  inset: 0;
+  top: clamp(1.5625rem, -1.36rem + 12.468vw, 4.625rem);
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  transform: translateX(-3rem);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.text.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.testimonial__text {
+  --p: clamp(2rem, 8.65vw, 4.125rem);
+  --m: 39.6875rem;
+
+  padding-block-start: clamp(1.5625rem, -1.36rem + 12.468vw, 4.625rem);
+
+  background-image: url("../images/pattern-quotes.svg");
+  background-position: top center;
+  background-size: 19% auto;
+  background-repeat: no-repeat;
+
+  @media (min-width: 48em) {
+    --p: clamp(4.1875rem, 2rem + 4.3155vw, 6rem);
+    --m: 50rem;
+  }
+
+  @media (max-width: calc(80em - 1px)) {
+    margin-block-start: clamp(2rem, 0.09rem + 8.1425vw, 4rem);
+    text-align: center;
+  }
+
+  @media (min-width: 80em) {
+    max-width: unset;
+  }
+}
+
+.testimonial__person-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: clamp(0.9375rem, 0.64rem + 1.273vw, 1.25rem);
+
+  margin-block-start: clamp(1rem, 0.046rem + 4.07vw, 2rem);
+
+  @media (min-width: 48em) {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 0.5rem;
+  }
+
+  @media (min-width: 80em) {
+    justify-content: flex-start;
+  }
+}
+
+.testimonial__person-name {
+  font-weight: 700;
+}
+
+.testimonial__person-position {
+  font-weight: 500;
+  color: var(--color-grey-400);
+}

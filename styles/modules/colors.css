@@ -1,0 +1,21 @@
+:root {
+  --color-grey-400: rgb(185, 185, 206);
+  --color-grey-100: rgb(235, 235, 235);
+  --color-grey-50: rgb(244, 244, 252);
+  --color-purple-500: rgb(207, 107, 203);
+  --color-pink-500: rgb(211, 98, 157);
+  --color-blue-950: rgb(32, 32, 71);
+}
+
+body {
+  color: var(--color-blue-950);
+
+  background-image: url("../../images/pattern-curve.svg");
+  background-position: bottom left;
+  background-size: 285px auto;
+  background-repeat: no-repeat;
+
+  @media (min-width: 80em) {
+    background-size: 610px auto;
+  }
+}

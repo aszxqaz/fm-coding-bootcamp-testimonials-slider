@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+  </head>
+
+  <body>
+    <div class="testimonial container container--testimonial">
+      <div class="testimonial__image">
+        <div class="image-background container">
+          <div class="image-wrapper">
+            <div class="image-parent">
+              <img
+                class="image active"
+                src="./images/image-tanya.jpg"
+                alt="Photo of Tanya"
+              />
+              <img
+                class="image"
+                src="./images/image-john.jpg"
+                alt="Photo of John"
+              />
+              <div class="slide-button-group">
+                <button
+                  class="slide-button slide-button--prev"
+                  aria-label="Previous slide"
+                ></button>
+                <button
+                  class="slide-button slide-button--next"
+                  aria-label="Next slide"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial__text text-parent container">
+        <div class="text-placeholder" aria-hidden="true">
+          <p>
+            “ I’ve been interested in coding for a while but never taken the
+            jump, until now. I couldn’t recommend this course enough. I’m now in
+            the job of my dreams and so excited about the future. ”
+          </p>
+        </div>
+
+        <div class="text active">
+          <p>
+            “ I’ve been interested in coding for a while but never taken the
+            jump, until now. I couldn’t recommend this course enough. I’m now in
+            the job of my dreams and so excited about the future. ”
+          </p>
+          <div class="testimonial__person-group">
+            <p class="testimonial__person-name">Tanya Sinclair</p>
+            <p class="testimonial__person-position">UX Engineer</p>
+          </div>
+        </div>
+
+        <div class="text">
+          <p>
+            “ If you want to lay the best foundation possible I’d recommend
+            taking this course. The depth the instructors go into is incredible.
+            I now feel so confident about starting up as a professional
+            developer. ”
+          </p>
+          <div class="testimonial__person-group">
+            <p class="testimonial__person-name">John Tarkpor</p>
+            <p class="testimonial__person-position">
+              Junior Front-end Developer
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
